@@ -294,7 +294,7 @@ def backfill_inplace_float64(ndarray[float64_t] values,
 def getMergeVec(ndarray[object] values, dict oldMap):
     cdef Py_ssize_t i, j, length, newLength
     cdef object idx
-    cdef ndarray[int32_t] fillVec
+    cdef ndarray[Py_ssize_t] fillVec
     cdef ndarray[int8_t] mask
 
     newLength = len(values)

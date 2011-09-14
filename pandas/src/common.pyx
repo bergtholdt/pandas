@@ -90,7 +90,7 @@ cpdef map_indices(ndarray index):
 
     Better to do this with Cython because of the enormous speed boost.
     '''
-    cdef npy_intp i, length
+    cdef Py_ssize_t i, length
     cdef flatiter iter
     cdef dict result
     cdef object idx
@@ -200,7 +200,7 @@ cdef class MultiMap:
 
 
 def isAllDates(ndarray index):
-    cdef npy_intp i, length
+    cdef Py_ssize_t i, length
     cdef flatiter iter
     cdef object date
 
